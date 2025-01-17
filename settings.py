@@ -317,7 +317,7 @@ AUTH_LDAP_SERVER_URI = get_from_env("AUTH_LDAP_SERVER_URI", "")
 AUTH_LDAP_BIND_DN = get_from_env("AUTH_LDAP_BIND_DN", "")
 AUTH_LDAP_BIND_PASSWORD = get_from_env("AUTH_LDAP_BIND_PASSWORD", "")
 AUTH_LDAP_USER_SEARCH = LDAPSearch("dc=example,dc=com",
-    ldap.SCOPE_SUBTREE, get_from_env("AUTH_LDAP_USER_SEARCH")
+    ldap.SCOPE_SUBTREE, get_from_env("AUTH_LDAP_USER_SEARCH", "")
 )
 
 AUTH_LDAP_USER_ATTR_MAP = {
